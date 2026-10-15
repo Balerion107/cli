@@ -2,8 +2,7 @@ name: PR Triaging
 on:
   pull_request_target:
     types: [opened, reopened, edited, labeled, ready_for_review]
-  schedule:
-    - cron: '0 4 * * *' # Daily at 4 AM UTC — close unmet-requirements PRs
+  workflow_dispatch:
 
 jobs:
   label-external:

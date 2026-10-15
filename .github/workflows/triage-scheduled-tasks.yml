@@ -3,10 +3,6 @@ on:
   workflow_dispatch:
   issue_comment:
     types: [created]
-  schedule:
-    - cron: '5 * * * *'   # Hourly — no-response close
-    - cron: '0 3 * * *'   # Daily at 3 AM UTC — stale issues
-    - cron: '0 14 1 * *'  # Monthly on the 1st at 2 PM UTC — pitch surfacing
 
 jobs:
   no-response:
